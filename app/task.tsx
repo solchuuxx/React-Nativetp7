@@ -67,7 +67,7 @@ const Example = () => {
           </HStack>
           <VStack space={2}>
             {list.map((item, itemI) => <HStack w="100%" justifyContent="space-between" alignItems="center" key={item.title + itemI.toString()}>
-                <Checkbox isChecked={item.isCompleted} onChange={() => handleStatusChange(itemI)} value={item.title}></Checkbox>
+                <Checkbox aria-label="" isChecked={item.isCompleted} onChange={() => handleStatusChange(itemI)} value={item.title}></Checkbox>
                 <Text width="100%" flexShrink={1} textAlign="left" mx="2" strikeThrough={item.isCompleted} _light={{
               color: item.isCompleted ? "gray.400" : "coolGray.800"
             }} _dark={{
