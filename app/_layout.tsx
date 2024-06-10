@@ -5,10 +5,49 @@ export default function RootLayout() {
   return (
     <NativeBaseProvider>
       <Stack>
-        <Stack.Screen name="index" />
-        <Stack.Screen name="login" />
-        <Stack.Screen name="register" />
-        <Stack.Screen name="task" />
+        <Stack.Screen name="index" 
+        options={{
+          title: 'Inicio',
+          headerStyle: {
+            backgroundColor: '#84B5F3',
+          }
+        }}
+        />
+        <Stack.Screen name="login" 
+        options={{
+          title: 'Iniciar sesion',
+          headerStyle: {
+            backgroundColor: '#84B5F3',
+          }
+        }}/>
+        <Stack.Screen name="register"  
+        options={{
+          title: 'Registro',
+          headerStyle: {
+            backgroundColor: '#84B5F3',
+          }
+        }}/>
+        <Stack.Screen name="task" 
+        options={{
+          title: 'Tareas',
+          headerStyle: {
+            backgroundColor: '#84B5F3',
+          }
+        }}/>
+         <Stack.Screen name="tasklist" 
+        options={{
+          title: 'Tareas',
+          headerStyle: {
+            backgroundColor: '#84B5F3',
+          }
+        }}/>
+        <Stack.Screen name="addtask" 
+        options={{
+          title: 'Tareas',
+          headerStyle: {
+            backgroundColor: '#84B5F3',
+          }
+        }}/>
       </Stack>
     </NativeBaseProvider>
   );

@@ -1,41 +1,87 @@
-import { View, Text, Image } from 'react-native'
-import { Input, Box, FormControl, Stack, WarningOutlineIcon, Icon, Button } from 'native-base'
-import { MaterialIcons } from "@expo/vector-icons";
+import { View, StyleSheet, ScrollView, Text } from 'react-native'
+import { Input, Box, Button, Text as NBText } from 'native-base'
 import { router } from "expo-router";
 import { Card } from '@rneui/base';
 import React from 'react'
 
 export default function register() {
   return (
-    <Box alignItems="center" justifyContent="center">
-    <Box>
-        <Image />
-    </Box>
-    <Box>
+    <View>
       <Card>
-      <Card.Title>Register</Card.Title>
-      <Card.Divider />
-        <FormControl isRequired>
-          <Stack mx="3">
-                <Input w="100%" 
-              InputLeftElement={<Icon as={<MaterialIcons name="person" />} size={5} ml="2" color="muted.400" />} placeholder="Username" />
-                <FormControl.Label>Password</FormControl.Label>
-                <FormControl.HelperText>
-                De 5 a 10 caracteres
-                </FormControl.HelperText>
-                <Input type="password" defaultValue="" placeholder="password" w="100%" />
-                <FormControl.Label>Repeat Password</FormControl.Label>
-                <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
-                  Aaaa
-                </FormControl.ErrorMessage>
-                <Input type="password" defaultValue="" placeholder="password" w="100%" />
-                <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
-                </FormControl.ErrorMessage>
-                <Button onPress={() => router.push("/login")}>Send</Button>
-              </Stack>
-        </FormControl>
+        <Card.Title>Register</Card.Title>
+        <Card.Divider />
+        <Card.Image
+          style={{ padding: 0, width: 100, height: 100, marginLeft:105}}
+          source={{
+            uri:
+              'https://th.bing.com/th/id/R.54cedafef938b477cee57bb5adc1fb31?rik=i3mLDOlZJNmIow&pid=ImgRaw&r=0',
+          }}
+        />
+        <Box style={{padding:10}}>
+          <Input mx="3" placeholder="Username" w="90%" style={{paddingBottom:20}} />
+          <Input mx="3" placeholder="Password" w="90%" style={{paddingBottom:20}} /> 
+          <Input mx="3" placeholder="Repeat Password" w="90%" style={{paddingBottom:20}} /> 
+        </Box>
+        <Button
+          style={{
+            borderRadius: 0,
+            marginLeft: 5,
+            marginRight: 0,
+            marginBottom: 0,
+          }}
+          onPress={() => router.push("/login")}
+        >
+          <NBText
+          style={{
+            color:'#f3f3f3',
+          }}
+          >Send</NBText>
+        </Button>
+
       </Card>
-    </Box>
-    </Box>
+
+      <ScrollView style={styles.content}>
+      </ScrollView>
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>Contenido para el footer</Text>
+      </View>
+
+    </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  fonts: {
+    marginBottom: 8,
+  },
+  user: {
+    flexDirection: 'row',
+    marginBottom: 6,
+  },
+  image: {
+    width: 30,
+    height: 30,
+    marginRight: 10,
+  },
+  name: {
+    fontSize: 16,
+    marginTop: 5,
+  },
+  content: {
+    flex: 1,
+  },
+  footer: {
+    width: '100%',
+    backgroundColor: '#84B5F3',
+    borderTopWidth: 1,
+    borderColor: '#ddd',
+    alignItems: 'center',
+    padding: 20,
+  },
+  footerText: {
+    color: '#000000',
+  },
+});
