@@ -24,6 +24,12 @@ export default function Index() {
         </HStack>
       </View>
 
+      <View style={styles.loginRegisterContainer}>
+      <Text style={styles.loginRegisterText}>Configura la aplicación:</Text>
+        <Button onPress={() => router.push("/config")} style={{ backgroundColor: '#84B5F3' }}>
+              SETTINGS
+        </Button>
+      </View>
 
       <ScrollView style={styles.content}>
       </ScrollView>
