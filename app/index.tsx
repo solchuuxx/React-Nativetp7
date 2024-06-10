@@ -14,15 +14,17 @@ export default function Index() {
       <View style={styles.loginRegisterContainer}>
         <Text style={styles.loginRegisterText}>Ingresa o registrate en la aplicación:</Text>
         <HStack space={3}>
-        <Button onPress={() => router.push("/login")} style={{ backgroundColor: '#84B5F3' }}>
-          LOGIN
-        </Button>
+          <Button onPress={() => router.push("/login")} style={{ backgroundColor: '#84B5F3' }}>
+            LOGIN
+          </Button>
 
           <Button onPress={() => router.push("/register")} style={{ backgroundColor: '#84B5F3' }}>
             REGISTER
           </Button>
         </HStack>
       </View>
+
+
       <ScrollView style={styles.content}>
       </ScrollView>
       <View style={styles.footer}>

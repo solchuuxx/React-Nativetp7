@@ -34,20 +34,6 @@ export default function RootLayout() {
             backgroundColor: '#84B5F3',
           }
         }}/>
-         <Stack.Screen name="tasklist" 
-        options={{
-          title: 'Tareas',
-          headerStyle: {
-            backgroundColor: '#84B5F3',
-          }
-        }}/>
-        <Stack.Screen name="addtask" 
-        options={{
-          title: 'Tareas',
-          headerStyle: {
-            backgroundColor: '#84B5F3',
-          }
-        }}/>
       </Stack>
     </NativeBaseProvider>
   );

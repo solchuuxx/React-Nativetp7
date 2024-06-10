@@ -73,6 +73,7 @@ export default function login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#FFFFFF",
   },
   fonts: {
     marginBottom: 8,
